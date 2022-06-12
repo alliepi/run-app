@@ -1,12 +1,22 @@
-import React from 'react';
+import { Navbar, Container, NavbarBrand } from 'reactstrap';
 import './App.css';
 
-function App() {
+const App = () => {
+
   return (
+
     <div className="App">
-      Race Finder
+      <Navbar dark sticky="top" expand="md">
+        <Container>
+          <NavbarBrand href='/'>
+            Race Finder
+          </NavbarBrand>
+        </Container>
+      </Navbar>
+      Find your next race here!
     </div>
   );
 }
+
 
 export default App;
