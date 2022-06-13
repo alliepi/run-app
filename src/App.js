@@ -1,19 +1,17 @@
-import { Navbar, Container, NavbarBrand } from 'reactstrap';
+import RacesList from './features/races/RacesList.js';
+import { RACES } from './app/shared/RACES';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App = () => {
 
   return (
 
     <div className="App">
-      <Navbar dark sticky="top" expand="md">
-        <Container>
-          <NavbarBrand href='/'>
-            Race Finder
-          </NavbarBrand>
-        </Container>
-      </Navbar>
-      Find your next race here!
+      <Header />
+      <RacesList />
+      <Footer />
     </div>
   );
 }
