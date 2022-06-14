@@ -1,19 +1,23 @@
 import { RACES } from '../../app/shared/RACES';
 import RaceCard from "./RaceCard";
-import { Row, Col } from 'reactstrap';
+import { Row, Col, ListGroup, ListGroupItem, Container } from 'reactstrap';
 
 const RacesList = () => {
     return (
-        <Row className="ms-auto" >
-            {
-                RACES.map(race => {
-                    return (
-                        <Col md='5' className='m-4' key={race.race_id} >
-                            <RaceCard race={race} />
-                        </Col>
-                    )
-                })}
-        </Row>
+        <Container>
+            <Row className="ms-auto" >
+                <ListGroup>
+                    {
+                        RACES.map(race => {
+                            return (
+                                <ListGroupItem key={race.race_id} >
+                                    <RaceCard race={race} />
+                                </ListGroupItem>
+                            )
+                        })}
+                </ListGroup>
+            </Row>
+        </Container>
     )
 }
 
