@@ -5,7 +5,7 @@ import { Row, Col, ListGroup, ListGroupItem, Container } from 'reactstrap';
 const RacesList = () => {
     return (
         <Container>
-            <Row className="ms-auto" >
+            <Row>
                 <ListGroup>
                     {
                         RACES.map(race => {

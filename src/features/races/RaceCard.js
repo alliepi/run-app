@@ -3,7 +3,7 @@ const RaceCard = ({ race }) => {
     const { name, next_date, address, url } = race;
 
     return (
-        <Row>
+        <Row className="race-card">
             <Col md={7}>
                 <ListGroupItemHeading>{name}</ListGroupItemHeading>
                 <ListGroupItemText>{next_date}</ListGroupItemText>
@@ -13,14 +13,15 @@ const RaceCard = ({ race }) => {
             <Col md={5}>
                 <div>
                     <Button
-                        color="primary"
+                        variant="default"
+                        style={{ color: "white", background: "#5dbdf9", border: "none" }}
                         href={url}
                     >
                         Discover this race!
                     </Button>
                 </div>
             </Col>
-        </Row>
+        </Row >
     )
 }
 
