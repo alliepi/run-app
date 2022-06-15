@@ -3,12 +3,11 @@ const RaceCard = ({ race }) => {
     const { name, next_date, address, url, logo_url } = race;
 
     return (
-        <Card>
+        <Card className="custom-card">
             <CardImg
                 alt={name}
                 src={logo_url}
                 top
-                width="100%"
             />
             <CardBody>
                 <CardTitle tag="h5">
@@ -38,8 +37,6 @@ const RaceCard = ({ race }) => {
                 </Button>
             </CardBody>
         </Card>
-
-
     )
 }
 
